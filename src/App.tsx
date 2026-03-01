@@ -726,7 +726,7 @@ export default function App() {
         <div className="flex flex-col md:flex-row justify-between items-center py-12 border-t border-[#141414] border-opacity-10 gap-6">
           <div className="flex items-center gap-4 opacity-40 grayscale">
             <img
-              src="value-engine-logo.jpg"
+              src="/value-engine-logo.jpg"
               alt="Logo"
               className="h-8 w-auto object-contain"
               referrerPolicy="no-referrer"
@@ -893,7 +893,7 @@ export default function App() {
               )}
             >
               <img
-                src="value-engine-logo.jpg"
+                src="/value-engine-logo.jpg"
                 alt="The Symbiotic Value Engine"
                 className="w-full h-auto object-contain"
                 referrerPolicy="no-referrer"
