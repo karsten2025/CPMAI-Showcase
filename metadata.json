@@ -1,0 +1,5 @@
+{
+  "name": "S6 Real-Time Baseline Dashboard",
+  "description": "Kontinuierlicher Soll-Ist-Abgleich von S6-Sanierungsdaten über verschiedene Datenpipelines (Strukturiert bis Unstrukturiert).",
+  "requestFramePermissions": []
+}

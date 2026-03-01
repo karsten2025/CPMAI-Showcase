@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#E4E3E0] text-[#141414];
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background-color: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #dashboard-root {
+    background-color: #e4e3e0 !important;
+    padding: 1cm !important;
+    min-height: 100vh !important;
+    width: 100% !important;
+  }
+
+  /* Ensure background colors print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Page breaks */
+  section,
+  .grid,
+  table {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Ensure the logo stays in place and is visible */
+  .absolute {
+    position: absolute !important;
+    z-index: 50 !important;
+  }
+
+  /* Hide scrollbars and extra space */
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+}
