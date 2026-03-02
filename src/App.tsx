@@ -505,7 +505,7 @@ export default function App() {
         <div className="text-center space-y-6 pt-12">
           <div className="inline-flex items-center gap-2 bg-[#141414] text-[#E4E3E0] px-4 py-1 font-mono text-[10px] uppercase tracking-widest mb-4">
             <Award size={12} className="text-rose-500" />
-            CPMAI Certified AI Showcase
+            CPMAI BUREAUCRACY-IMMUNE AGILITY Showcase
           </div>
           <h1 className="text-6xl md:text-9xl font-serif italic tracking-tighter leading-none">
             S6 Baseline{" "}
