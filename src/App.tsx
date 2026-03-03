@@ -659,7 +659,7 @@ export default function App() {
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 bg-rose-600 rounded-full flex items-center justify-center text-2xl font-serif italic">
-                  KZ
+                  ZK
                 </div>
                 <div>
                   <h4 className="text-2xl font-serif italic">Karsten Zenk</h4>
