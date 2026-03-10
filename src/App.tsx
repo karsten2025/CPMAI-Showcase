@@ -765,7 +765,7 @@ export default function App() {
   return (
     <div
       id="dashboard-root"
-      className="min-h-screen bg-[#E4E3E0] text-[#141414] font-sans p-4 md:p-6 lg:p-12 relative"
+      className="min-h-screen bg-[#E4E3E0] text-[#141414] font-sans p-4 md:p-6 lg:p-12 relative overflow-x-hidden"
     >
       {/* Export Loading Overlay */}
       {isExporting && (
@@ -786,9 +786,9 @@ export default function App() {
 
       {/* Export Error Toast */}
       {exportError && (
-        <div className="fixed bottom-6 right-6 bg-rose-600 text-white p-4 font-mono text-xs z-[100] shadow-xl flex items-center gap-4 no-print">
+        <div className="fixed bottom-6 right-4 sm:right-6 bg-rose-600 text-white p-4 font-mono text-xs z-[100] shadow-xl flex items-center gap-4 no-print max-w-[calc(100vw-2rem)]">
           <AlertCircle size={16} />
-          <span>{exportError}</span>
+          <span className="break-words">{exportError}</span>
           <button onClick={() => setExportError(null)} className="underline">
             Schließen
           </button>
@@ -806,17 +806,17 @@ export default function App() {
               Zurück zum Portal
             </button>
           </div>
-          <div className="flex items-center gap-2 mb-2 no-print">
+          <div className="flex flex-wrap items-center gap-2 mb-2 no-print min-w-0">
             <div className="w-3 h-3 bg-rose-600 animate-pulse rounded-full" />
             <span className="font-mono text-[10px] uppercase tracking-widest opacity-60">
               Live Data Pipeline Active
             </span>
-            <div className="ml-4 flex items-center gap-2 bg-[#141414] text-[#E4E3E0] px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest">
+            <div className="sm:ml-4 flex items-center gap-2 bg-[#141414] text-[#E4E3E0] px-2 py-0.5 font-mono text-[8px] uppercase tracking-widest max-w-full">
               <Award size={10} className="text-rose-500" />
-              CPMAI Methodology Applied
+              <span className="truncate">CPMAI Methodology Applied</span>
             </div>
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif italic tracking-tighter leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif italic tracking-tighter leading-tight break-words">
             S6 Baseline{" "}
             <span className="font-sans not-italic font-bold">Control</span>
           </h1>
@@ -826,7 +826,7 @@ export default function App() {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-end gap-4 md:gap-6">
+        <div className="flex flex-col md:flex-row items-stretch md:items-end gap-4 md:gap-6 w-full md:w-auto min-w-0">
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 no-print w-full md:w-auto">
             <div className="flex flex-col gap-2">
               <button
@@ -923,11 +923,11 @@ export default function App() {
       {/* Pipeline Blueprint Section (The "Container" for Stakeholders & Data Scientists) */}
       {showBlueprint && (
         <section className="mb-10 md:mb-12 border-2 border-[#141414] p-4 sm:p-6 lg:p-8 bg-white shadow-[8px_8px_0px_0px_rgba(20,20,20,1)]">
-          <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center mb-8 gap-6">
+          <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center mb-8 gap-6 min-w-0">
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3">
                 <Layers className="text-rose-600" />
-                <h2 className="text-3xl font-serif italic">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif italic break-words">
                   Pipeline Blueprint:{" "}
                   <span className="font-sans not-italic font-bold">
                     {selectedPipeline === "structured"
@@ -1006,11 +1006,11 @@ export default function App() {
               </div>
             </div>
 
-            <div className="flex bg-[#E4E3E0] p-1 rounded-none border border-[#141414] no-print">
+            <div className="flex flex-col sm:flex-row bg-[#E4E3E0] p-1 rounded-none border border-[#141414] no-print w-full sm:w-auto">
               <button
                 onClick={() => setPersona("stakeholder")}
                 className={cn(
-                  "px-4 py-2 font-mono text-[10px] uppercase tracking-widest transition-all",
+                  "px-4 py-2 font-mono text-[10px] uppercase tracking-widest transition-all min-h-[44px] w-full sm:w-auto",
                   persona === "stakeholder"
                     ? "bg-[#141414] text-[#E4E3E0]"
                     : "text-[#141414] hover:bg-black/5"
@@ -1021,7 +1021,7 @@ export default function App() {
               <button
                 onClick={() => setPersona("developer")}
                 className={cn(
-                  "px-4 py-2 font-mono text-[10px] uppercase tracking-widest transition-all",
+                  "px-4 py-2 font-mono text-[10px] uppercase tracking-widest transition-all min-h-[44px] w-full sm:w-auto",
                   persona === "developer"
                     ? "bg-[#141414] text-[#E4E3E0]"
                     : "text-[#141414] hover:bg-black/5"
