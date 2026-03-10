@@ -936,11 +936,11 @@ export default function App() {
                   </span>
                 </h2>
               </div>
-              <div className="flex gap-2 overflow-x-auto pb-2 no-scrollbar">
+              <div className="flex flex-wrap gap-2 pb-2">
                 <button
                   onClick={() => setSelectedPipeline("structured")}
                   className={cn(
-                    "px-3 py-1 font-mono text-[9px] uppercase tracking-widest border border-[#141414] whitespace-nowrap",
+                    "px-3 py-1 font-mono text-[9px] uppercase tracking-widest border border-[#141414]",
                     selectedPipeline === "structured"
                       ? "bg-rose-600 text-white border-rose-600"
                       : "bg-transparent text-[#141414]"
@@ -951,7 +951,7 @@ export default function App() {
                 <button
                   onClick={() => setSelectedPipeline("hierarchical")}
                   className={cn(
-                    "px-3 py-1 font-mono text-[9px] uppercase tracking-widest border border-[#141414] whitespace-nowrap",
+                    "px-3 py-1 font-mono text-[9px] uppercase tracking-widest border border-[#141414]",
                     selectedPipeline === "hierarchical"
                       ? "bg-rose-600 text-white border-rose-600"
                       : "bg-transparent text-[#141414]"
@@ -962,7 +962,7 @@ export default function App() {
                 <button
                   onClick={() => setSelectedPipeline("semi-structured")}
                   className={cn(
-                    "px-3 py-1 font-mono text-[9px] uppercase tracking-widest border border-[#141414] whitespace-nowrap",
+                    "px-3 py-1 font-mono text-[9px] uppercase tracking-widest border border-[#141414]",
                     selectedPipeline === "semi-structured"
                       ? "bg-rose-600 text-white border-rose-600"
                       : "bg-transparent text-[#141414]"
@@ -973,7 +973,7 @@ export default function App() {
                 <button
                   onClick={() => setSelectedPipeline("unstructured-text")}
                   className={cn(
-                    "px-3 py-1 font-mono text-[9px] uppercase tracking-widest border border-[#141414] whitespace-nowrap",
+                    "px-3 py-1 font-mono text-[9px] uppercase tracking-widest border border-[#141414]",
                     selectedPipeline === "unstructured-text"
                       ? "bg-rose-600 text-white border-rose-600"
                       : "bg-transparent text-[#141414]"
@@ -984,7 +984,7 @@ export default function App() {
                 <button
                   onClick={() => setSelectedPipeline("unstructured-visual")}
                   className={cn(
-                    "px-3 py-1 font-mono text-[9px] uppercase tracking-widest border border-[#141414] whitespace-nowrap",
+                    "px-3 py-1 font-mono text-[9px] uppercase tracking-widest border border-[#141414]",
                     selectedPipeline === "unstructured-visual"
                       ? "bg-rose-600 text-white border-rose-600"
                       : "bg-transparent text-[#141414]"
@@ -995,7 +995,7 @@ export default function App() {
                 <button
                   onClick={() => setSelectedPipeline("streaming")}
                   className={cn(
-                    "px-3 py-1 font-mono text-[9px] uppercase tracking-widest border border-[#141414] whitespace-nowrap",
+                    "px-3 py-1 font-mono text-[9px] uppercase tracking-widest border border-[#141414]",
                     selectedPipeline === "streaming"
                       ? "bg-rose-600 text-white border-rose-600"
                       : "bg-transparent text-[#141414]"
