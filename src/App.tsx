@@ -499,26 +499,26 @@ export default function App() {
   const categories = Array.from(new Set(data.map((d) => d.kategorie)));
 
   const Portal = () => (
-    <div className="min-h-screen bg-[#E4E3E0] flex flex-col items-center p-6 lg:p-12 font-sans text-[#141414]">
-      <div className="max-w-6xl w-full space-y-20">
+    <div className="min-h-screen bg-[#E4E3E0] flex flex-col items-center p-4 md:p-6 lg:p-12 font-sans text-[#141414]">
+      <div className="max-w-6xl w-full space-y-12 md:space-y-20">
         {/* Hero Section */}
-        <div className="text-center space-y-6 pt-12">
+        <div className="text-center space-y-6 pt-10 md:pt-12">
           <div className="inline-flex items-center gap-2 bg-[#141414] text-[#E4E3E0] px-4 py-1 font-mono text-[10px] uppercase tracking-widest mb-4">
             <Award size={12} className="text-rose-500" />
             CPMAI BUREAUCRACY-IMMUNE AGILITY Showcase
           </div>
-          <h1 className="text-6xl md:text-9xl font-serif italic tracking-tighter leading-none">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif italic tracking-tighter leading-tight">
             S6 Baseline{" "}
             <span className="font-sans not-italic font-bold">Portal</span>
           </h1>
-          <p className="font-mono text-xs uppercase tracking-widest opacity-60 max-w-2xl mx-auto leading-relaxed">
+            <p className="font-mono text-xs uppercase tracking-widest opacity-60 max-w-xl mx-auto leading-relaxed">
             Ein Showcase für KI-gestütztes Sanierungscontrolling basierend auf
             der <span className="font-bold opacity-100">CPMAI Methodik</span>.
           </p>
         </div>
 
         {/* Persona Selection */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Stakeholder Card */}
           <button
             onClick={() => {
@@ -526,9 +526,9 @@ export default function App() {
               setView("dashboard");
               setShowBlueprint(true);
             }}
-            className="group relative bg-white border-2 border-[#141414] p-10 text-left transition-all hover:shadow-[16px_16px_0px_0px_rgba(20,20,20,1)] hover:-translate-x-1 hover:-translate-y-1"
+            className="group relative bg-white border-2 border-[#141414] p-6 md:p-10 text-left transition-all hover:shadow-[16px_16px_0px_0px_rgba(20,20,20,1)] hover:-translate-x-1 hover:-translate-y-1"
           >
-            <div className="flex justify-between items-start mb-16">
+            <div className="flex justify-between items-start mb-10 md:mb-16">
               <ShieldCheck size={40} className="text-rose-600" />
               <div className="flex flex-col items-end">
                 <ChevronRight
@@ -562,9 +562,9 @@ export default function App() {
               setView("dashboard");
               setShowBlueprint(true);
             }}
-            className="group relative bg-[#141414] text-[#E4E3E0] border-2 border-[#141414] p-10 text-left transition-all hover:shadow-[16px_16px_0px_0px_rgba(228,227,224,0.2)] hover:-translate-x-1 hover:-translate-y-1"
+            className="group relative bg-[#141414] text-[#E4E3E0] border-2 border-[#141414] p-6 md:p-10 text-left transition-all hover:shadow-[16px_16px_0px_0px_rgba(228,227,224,0.2)] hover:-translate-x-1 hover:-translate-y-1"
           >
-            <div className="flex justify-between items-start mb-16">
+            <div className="flex justify-between items-start mb-10 md:mb-16">
               <Database size={40} className="text-rose-600" />
               <div className="flex flex-col items-end">
                 <ChevronRight
@@ -591,10 +591,10 @@ export default function App() {
         </div>
 
         {/* CPMAI Methodology Section */}
-        <div className="space-y-12 py-20 border-t border-[#141414] border-opacity-10">
+        <div className="space-y-10 md:space-y-12 py-12 md:py-20 border-t border-[#141414] border-opacity-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
             <div className="space-y-4">
-              <h3 className="text-4xl font-serif italic">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif italic">
                 The CPMAI Methodology
               </h3>
               <p className="font-mono text-xs uppercase tracking-widest opacity-60">
@@ -632,9 +632,11 @@ export default function App() {
         </div>
 
         {/* Showcase / About Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 py-20 border-t border-[#141414] border-opacity-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 py-12 md:py-20 border-t border-[#141414] border-opacity-10">
           <div className="space-y-8">
-            <h3 className="text-4xl font-serif italic">Über diesen Showcase</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif italic">
+              Über diesen Showcase
+            </h3>
             <div className="space-y-6 text-lg leading-relaxed opacity-80">
               <p>
                 Dieses Projekt demonstriert die Verschmelzung von klassischem
@@ -655,7 +657,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="bg-[#141414] text-[#E4E3E0] p-12 space-y-8 flex flex-col justify-between">
+          <div className="bg-[#141414] text-[#E4E3E0] p-8 md:p-12 space-y-8 flex flex-col justify-between">
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 bg-rose-600 rounded-full flex items-center justify-center text-2xl font-serif italic">
@@ -763,7 +765,7 @@ export default function App() {
   return (
     <div
       id="dashboard-root"
-      className="min-h-screen bg-[#E4E3E0] text-[#141414] font-sans p-6 lg:p-12 relative"
+      className="min-h-screen bg-[#E4E3E0] text-[#141414] font-sans p-4 md:p-6 lg:p-12 relative"
     >
       {/* Export Loading Overlay */}
       {isExporting && (
@@ -793,7 +795,7 @@ export default function App() {
         </div>
       )}
       {/* Header */}
-      <header className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-[#141414] pb-8 gap-6">
+      <header className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 border-b border-[#141414] pb-6 md:pb-8 gap-6">
         <div>
           <div className="flex items-center gap-2 mb-2 no-print">
             <button
@@ -814,24 +816,24 @@ export default function App() {
               CPMAI Methodology Applied
             </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-serif italic tracking-tighter leading-none">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif italic tracking-tighter leading-tight">
             S6 Baseline{" "}
             <span className="font-sans not-italic font-bold">Control</span>
           </h1>
-          <p className="mt-4 font-mono text-xs uppercase tracking-widest opacity-60 max-w-md">
+          <p className="mt-3 font-mono text-xs uppercase tracking-widest opacity-60 max-w-md">
             Kontinuierlicher Soll-Ist-Abgleich operativer Unternehmensdaten
             gemäß Sanierungsgutachten.
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-end gap-6">
-          <div className="flex gap-4 no-print">
+        <div className="flex flex-col md:flex-row items-end gap-4 md:gap-6">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 no-print w-full md:w-auto">
             <div className="flex flex-col gap-2">
               <button
                 onClick={exportToPDF}
                 disabled={isExporting}
                 className={cn(
-                  "group flex items-center gap-3 border border-[#141414] px-6 py-4 rounded-none hover:bg-[#141414] hover:text-[#E4E3E0] transition-colors duration-300",
+                  "group flex items-center justify-center gap-3 border border-[#141414] px-4 sm:px-6 py-3 sm:py-4 rounded-none hover:bg-[#141414] hover:text-[#E4E3E0] transition-colors duration-300 min-h-[44px]",
                   isExporting && "opacity-50 cursor-not-allowed"
                 )}
                 title="Automatischer PDF-Download"
@@ -849,7 +851,7 @@ export default function App() {
                   window.focus();
                   setTimeout(() => window.print(), 200);
                 }}
-                className="font-mono text-[9px] uppercase tracking-tighter opacity-40 hover:opacity-100 underline text-right"
+                className="font-mono text-[9px] uppercase tracking-tighter opacity-40 hover:opacity-100 underline text-right mt-1"
               >
                 Alternative: Manueller Druck (Strg+P)
               </button>
@@ -857,7 +859,7 @@ export default function App() {
 
             <button
               onClick={() => setShowBlueprint(!showBlueprint)}
-              className="group flex items-center gap-3 border border-[#141414] px-6 py-4 rounded-none hover:bg-[#141414] hover:text-[#E4E3E0] transition-colors duration-300"
+              className="group flex items-center justify-center gap-3 border border-[#141414] px-4 sm:px-6 py-3 sm:py-4 rounded-none hover:bg-[#141414] hover:text-[#E4E3E0] transition-colors duration-300 min-h-[44px]"
             >
               <Info size={18} />
               <span className="font-mono text-xs uppercase tracking-widest font-bold">
@@ -868,7 +870,7 @@ export default function App() {
             <button
               onClick={simulateIngestion}
               disabled={isIngesting}
-              className="group flex items-center gap-3 bg-[#141414] text-[#E4E3E0] px-6 py-4 rounded-none hover:bg-rose-600 transition-colors duration-300 disabled:opacity-50 no-print"
+              className="group flex items-center justify-center gap-3 bg-[#141414] text-[#E4E3E0] px-4 sm:px-6 py-3 sm:py-4 rounded-none hover:bg-rose-600 transition-colors duration-300 disabled:opacity-50 no-print min-h-[44px]"
             >
               <Database
                 size={18}
@@ -882,7 +884,7 @@ export default function App() {
 
           {/* Logo Section - Absolute Positioned for precision */}
           <div
-            className="absolute right-6 lg:right-12 flex flex-col items-end transition-all duration-500 z-10"
+          className="absolute right-4 sm:right-6 lg:right-12 flex flex-col items-end transition-all duration-500 z-10"
             style={{ top: LOGO_CONFIG.top }}
           >
             <div
@@ -920,7 +922,7 @@ export default function App() {
 
       {/* Pipeline Blueprint Section (The "Container" for Stakeholders & Data Scientists) */}
       {showBlueprint && (
-        <section className="mb-12 border-2 border-[#141414] p-8 bg-white shadow-[8px_8px_0px_0px_rgba(20,20,20,1)]">
+        <section className="mb-10 md:mb-12 border-2 border-[#141414] p-4 sm:p-6 lg:p-8 bg-white shadow-[8px_8px_0px_0px_rgba(20,20,20,1)]">
           <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center mb-8 gap-6">
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3">
@@ -1308,7 +1310,7 @@ export default function App() {
       )}
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#141414] border border-[#141414] mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#141414] border border-[#141414] mb-10 md:mb-12">
         {categories.slice(0, 4).map((cat) => {
           const catData = data.filter((d) => d.kategorie === cat);
           const Icon =
@@ -1344,10 +1346,10 @@ export default function App() {
       </div>
 
       {/* Main Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
         {/* Detailed Table */}
         <div className="lg:col-span-2">
-          <div className="flex items-center gap-2 mb-6">
+          <div className="flex items-center gap-2 mb-4 md:mb-6">
             <h2 className="font-serif italic text-2xl">Maßnahmen-Matrix</h2>
             <div className="h-px flex-1 bg-[#141414] opacity-20" />
           </div>
@@ -1472,7 +1474,7 @@ export default function App() {
         </div>
 
         {/* Sidebar / Visualization */}
-        <div className="space-y-12">
+        <div className="space-y-10 md:space-y-12">
           <section>
             <div className="flex items-center gap-2 mb-6">
               <h2 className="font-serif italic text-2xl">Finanz-Performance</h2>
@@ -1525,7 +1527,7 @@ export default function App() {
             </div>
           </section>
 
-          <section className="bg-[#141414] text-[#E4E3E0] p-8">
+          <section className="bg-[#141414] text-[#E4E3E0] p-6 md:p-8">
             <h3 className="font-mono text-[10px] uppercase tracking-widest mb-6 opacity-60">
               Pipeline Status
             </h3>

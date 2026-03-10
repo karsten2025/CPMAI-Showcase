@@ -1,6 +1,6 @@
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -10,7 +10,7 @@
 
 @layer base {
   body {
-    @apply bg-[#E4E3E0] text-[#141414];
+    @apply bg-[#E4E3E0] text-[#141414] overflow-x-hidden;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
